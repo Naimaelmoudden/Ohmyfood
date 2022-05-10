@@ -1,0 +1,79 @@
+@use "../utils/variables.scss";
+@use "../utils/mixin.scss";
+
+.restaurants {
+    background-color:$color-white;
+    width: 100%;
+    display: flex; 
+    margin: 0 auto;
+    padding: 15px 0px;
+    padding-left:4rem;
+    flex-direction: column;
+  &__anchor { 
+    top: 50px;
+    right: 27px;
+    background-color:$color-white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 0.9em;
+    color:darken($tertiary-color, 45%);;;
+    font-weight: 500;
+    border-radius: 15px;
+    width: 95%;
+    box-shadow:$box-shadow;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: black;
+    margin: 20px 0px;
+    text-decoration: none;
+  }
+    &__container{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    @media (max-width:767px){
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+    &__list__card {
+      position: relative;
+      width: 95%;
+      padding-bottom: 5ch;
+      padding-top: 0;
+      margin : 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; 
+    }
+    &__pic{ 
+      background-size: cover;
+      min-width: 40%;
+      min-height: 170px;
+      background-position: center center;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    &__text {
+      padding: 0;
+      padding-left: 13px;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1rem;
+      font-family: "Roboto", sans-serif;
+      position: relative;
+      border-radius: 0 0 1rem 1rem;
+        @include heart-solid;
+    }
+  }
+  .new {
+    position: absolute;
+    top: 28px;
+    right: 15px;
+    background-color:$tertiary-color;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 0.9em;
+    color: darken($tertiary-color, 45%);;
+    font-weight: 500;
+  }

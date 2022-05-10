@@ -1,0 +1,20 @@
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  margin: 3px auto;
+}
+h2{
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

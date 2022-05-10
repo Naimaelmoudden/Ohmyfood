@@ -1,0 +1,191 @@
+@use "../utils/variables.scss";
+@use "../utils/mixin.scss";
+/*icon header page2*/
+#home-page1{ 
+    header{ 
+    &::before {
+        @include font-awesome($font-weight: 900);
+        content: "\f060";
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        transition: transform 200ms;
+      }
+    }
+}
+  .img{
+    display: block;
+    object-position: center;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  } 
+  .menu-title h2 {
+    font-size: 20px;
+    width: 100%;
+    padding:$font-sizes 0;
+    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    font-family: "Shrikhand", cursive;
+    @include heart-solid;
+        @media (max-width: 350px) {
+            max-width: 98%;
+        }
+} 
+  .menu{
+    display: grid;
+    gap: $font-sizes;
+    grid-template-columns: 1fr;
+    &_container{
+      position: relative;
+      top: -2rem;
+      width: 100%;
+      background-color: #e5e5e5;
+      border-radius: 40px 40px 0 0 ;  
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      margin: -1rem 0 -2rem 0;
+      padding: 15px 15px 5% 15px;
+      @media (min-width: 640px) {
+          width: 100%;
+          padding-right: 108px;
+          padding-left: 133px;
+      }
+    }
+  }
+    .title-card {
+    font-weight: 100;
+    left    : 0;
+    width: 75px;
+    border-bottom: 3px solid  $tertiary-color;
+    font-weight: 400;
+    margin-bottom: $font-sizes;
+    position: relative;
+    text-transform: uppercase;
+    }
+    
+    .menu .main-dishes .desserts {
+        margin: 0;
+        width: 101%;
+        
+    }    
+    .starters--anim {
+        animation: fadein 900ms ease-out 200ms 1;
+    }
+    .main-dishes--anim {
+        animation: fadein 900ms ease-out 400ms 1;
+    }
+    .desserts--anim {
+        animation: fadein 900ms ease-out 600ms 1;
+    }
+   
+    .menu-card{   
+        background-color: $section-backColor;
+        box-shadow: $box-shadow;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        &:hover {
+            .add-plate {
+                animation: save-plate 1s ease-out forwards;
+            }
+            .check-icon {
+                animation: rotate 1s ease-out 1;
+            }
+            .plate, p  ,h5 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+      
+        .plate {
+            padding: 5px;
+            width: 71%;
+          
+        }
+           .price-menu {
+            align-items: flex-end;
+            display: flex;
+            font-weight: 700;
+            margin-left: auto;
+            padding: 1rem;
+        }
+    
+            
+        
+        .add-plate {
+            background-color:$tertiary-color;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            opacity: 0; 
+            display: grid;
+            width: 0;
+        }
+        .check-icon {
+            color: $color-white;
+            line-height: 61px;
+            display: block;
+            text-align: center;
+            &:hover{
+              margin-right: 0;
+              cursor: pointer;
+            }
+        }
+        h5  {
+            font-size:1em ;
+            margin: 5px;
+            max-width: 200px;
+            white-space: nowrap; 
+            @media (max-width: 350px) {
+                font-size: 1em;
+                max-width: 150px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }  
+        }
+       p  {
+            font-family: "Roboto", sans-serif;
+            font-weight: 200;
+            font-size: 0.9rem;
+            margin: 5px;
+            max-width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            @media (max-width: 350px) {
+                max-width: 150px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            @media (min-width: 640px) {
+                max-width: 280px;
+            }
+            @media (min-width: 768px) {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                max-width: 200px;
+            }
+        }
+    }
+    .menu .meal-choice .add-plate {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      opacity: 0;
+      width: 0;
+    }
+    /*btn commander*/
+    .btn--size{
+     @include btn--size;
+    }

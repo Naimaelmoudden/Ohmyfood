@@ -1,0 +1,55 @@
+@use "../utils/variables.scss";
+
+.section-title h2 {
+    @media (max-width: 600px){
+      margin-left: 5%;
+    }
+   }
+  .operations {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap:$font-sizes+$font-sizes;
+    @media (max-width: 800px){
+      flex-direction: column;
+      align-self: start;
+      flex-wrap: wrap;
+    }
+}
+  .operation{
+      position: relative;
+      height: 62px;
+      padding: $font-sizes $font-sizes+$font-sizes;
+      border-radius: 17px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      margin:0 20px 20px 0;
+      background-color:  $section-backColor;
+      box-shadow: $box-shadow;
+        &:hover{
+          background-color: rgba($primary-color, .1);
+          cursor: pointer;
+        } 
+        &-sort {
+       
+          background-color:$primary-color;
+          color: $section-backColor;
+          width: 24px;
+          left: -2px;
+          border: 2px solid transparent;;
+          border-radius: 20px;
+          text-align: center;
+          transform: translate(-4px, -1px);
+          font-size:14px;
+          justify-content: center;
+          display: grid;
+          place-items: center;
+          position: absolute;
+          bottom: $font-sizes;
+          
+        }
+        & icon {
+          color:$color-icon;
+          margin-right:$font-sizes+$font-sizes;
+    }
+}
